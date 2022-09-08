@@ -1,0 +1,20 @@
+'''A PAIR OF NUMBERS ARE CALLED AN AMICABLE NUMBER PAIR IF THE SUM OF DIVISORS OF ONE NUMBER IS EQUAL TO THE OTHER NUMBER '''
+''' EXAMPLES ARE 220 AND 284 '''
+
+def sum_of_divisors(num):
+    sum = 0
+    for i in range(1,num):
+        if num%i ==  0:
+            sum += i
+    return sum
+def check_amicable_pairs(num1,num2):
+    if sum_of_divisors(num1)==num2 and sum_of_divisors(num2) ==num1 :
+        return True
+    else:
+        return False
+num1=int(input("Enter num1 : "))
+num2=int(input("Enter num2 : "))
+if check_amicable_pairs(num1,num2):
+    print(f"{num1} , {num2} are amicable pair")
+else:
+    print(f"{num1} ,{num2} are not amicable pair")
