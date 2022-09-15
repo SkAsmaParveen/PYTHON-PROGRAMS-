@@ -19,5 +19,43 @@
                 >>> d
                      {'gm': 'asma', 'lb': 'pounds', 'w': 'Watt', 'j': 'joules'}
 > 
-    e) values() :
-    f) items() '''
+    e) values() : IT RETURNS THE VALUES OF THE GIVEN DICTIONARY
+    
+                  >>> d.values()
+                     dict_values(['kilometer', 'grams', 'pounds', 'Watt', 'joules'])
+                     
+    f) items() :  IT RETURNS THE ITEMS(KEY AND VALUE PAIRS) OF THE GIVEN DICTIONARY
+    
+                  >>> d.items()
+                     dict_items([('km', 'kilometer'), ('gm', 'grams'), ('lb', 'pounds'), ('w', 'Watt'), ('j', 'joules')])   '''
+                     
+
+d = {'km': 'kilometer', 'gm': 'grams', 'lb': 'pounds', 'w': 'Watt', 'j': 'joules'}
+
+a = input("Enter a unit: ")
+print(f"Value of {a} is: ", d.get(a))
+
+print("The keys are: ", d.keys())
+print("The values are: ", d.values())
+print("The key value pairs are: ", d.items())
+
+a = input("Enter a unit to pop out from the list: ")
+x = d.pop(a)
+print("The popped out value is: ", x)
+
+a = input("Enter a unit to update the dict: ")
+x = input("Enter the value to update with: ")
+d.update({a: x})
+print("The updated dictionary is: ", d)
+
+OUTPUT:
+Enter a unit: km
+Value of 'km' is: 'kilometer'
+The keys are:  dict_keys(['km', 'gm', 'lb', 'w', 'j'])
+The values are:  dict_values(['kilometer', 'grams', 'pounds', 'Watt', 'joules'])
+The key value pairs are:  dict_items([('km', 'kilometer'), ('gm', 'grams'), ('lb', 'pounds'), ('w', 'Watt'), ('j', 'joules')])
+Enter a unit to pop out from the list: km
+The popped out value is:  kilometer
+Enter a unit to update the dict: grams
+Enter the value to update with: 7
+The updated dictionary is:  {'gm': 'grams', 'lb': 'pounds', 'w': 'Watt', 'j': 'joules', 'grams': '7'}
