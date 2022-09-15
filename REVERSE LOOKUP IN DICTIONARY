@@ -1,0 +1,23 @@
+'''SUPPOSE YOU HAVE A DICTIONARY "d" AND KEY "k" .iT IS EASY TO FIND THE CORRESPONDING VALUE BY "d[k]".THEN IT RETURNS "v".This is called   
+   "  lookup"
+But what if you have v and you want to find k? You have two problems: first, there might be more than one key that maps to the value v. 
+Depending on the application, you might be able to pick one, or you might have to make a list that contains all of them. 
+Second, there is no simple syntax to do a reverse lookup; you have to search. '''
+
+def RevLookup(d,v):
+    for k in d:
+        if d[k] == v:
+            return k
+    return -1 
+Dict = { "Asma" : 1, "Parveen" : 2,"Roshi" : 3 ,"Nouri" : 4 , "Omarie" : 5 }
+
+Value = int(input("Enter the value you are looking for :"))
+k=RevLookup(Dict,Value)
+if k == -1:
+    print("No person found with Value" , Value)
+else:
+    print("The person with the given Value is:",k)
+    
+OUTPUT:
+Enter the value you are looking for :9
+No person found with Value 9
