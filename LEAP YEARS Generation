@@ -1,5 +1,5 @@
-def LeapYears(y):
-      if y % 4 == 0 and y % 100 != 0 or y % 400 == 0:
+def LeapYear(y):
+      if (y % 4 == 0 and y % 100 != 0) or (y % 400 == 0):
           return True
       else:
           return False
@@ -7,7 +7,12 @@ yr = int(input("enter the starting year:"))
 n=yr
 leaps =[]
 while len(leaps) != 15:
-     yr.append(leaps)
-     yr+=1
+    if LeapYear(yr):
+        leaps.append(yr)
+    yr+=1
 
-print("the leap years from the given year {n} are:" ,LeapYears(y))
+print(f"the leap years from the given year {n} are:" ,leaps)
+
+OUTPUT:
+enter the starting year:2012
+the leap years from the given year 2012 are: [2012, 2016, 2020, 2024, 2028, 2032, 2036, 2040, 2044, 2048, 2052, 2056, 2060, 2064, 2068]
