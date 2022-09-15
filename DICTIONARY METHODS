@@ -1,0 +1,23 @@
+''' a) get() : IT RETURNS THE VALUE OF THE ITEM WITH THE SPECIFIED KEY\
+
+               >>> d.get('km')
+                   'kilometer'                      
+    b) keys() : IT RETURNS ALL THE KEYS IN A DICTIONARY GIVEN
+    
+               >>> d.keys()
+                   dict_keys(['km', 'gm', 'lb', 'w', 'j'])
+                   
+    c) pop() : IT REMOVES THE SPECIFIED ITEM FROM THE DICTIONARY
+    
+               >>> d.pop('km')
+                   'kilometer'
+               >>> d
+                   {'gm': 'grams', 'lb': 'pounds', 'w': 'Watt', 'j': 'joules'}
+                   
+    d) update() : IT INSERTS THE SPECIFIED ITEM TO A DICTIONARY
+                >>> d.update({'gm':'asma'})
+                >>> d
+                     {'gm': 'asma', 'lb': 'pounds', 'w': 'Watt', 'j': 'joules'}
+> 
+    e) values() :
+    f) items() '''
