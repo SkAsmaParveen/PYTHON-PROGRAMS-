@@ -11,3 +11,22 @@ print(nums)
 OUTPUT:
 Enter the elements to be sorted  :55,83,23,44,10,2
 [2, 10, 23, 44, 55, 83]
+
+
+''' SELECTION SORT : IT IS AN ALGORITHM WHICH SORTS AN ARRAY BY REPEATEDLY FINDING THE MINIMUM ELEMENT (CONSIDERS ASCENDING ORDER) FROM THE UNSORTED 
+    PART AND PUT IT AT THE BEGINNING '''
+    
+nums = list(map(int,input("Enter the list of elements : ").split()))
+# IT HAS TWO PARTS : 1.SORTED 2.UNSORTED 
+# FIRSTLY FIND THE MINIMUM ELEMENT FROM THE UNSORTED PART BY TRAVERSING
+# AND CONSIDERING THE FIRST ELEMENT AS min_index
+
+for i in range(len(nums)):
+    min_index = i
+    for j in range(i+1 , len(nums)):
+        if nums[min_index] > nums[j]:#FIND THE MINIMUM ELEMENT FROM THE UNSORTED ARRAY
+            min_index = j
+            
+    nums[min_index] , nums[i] = nums[i] ,nums[min_index] #swAP THE MINIMUM ELEMENT and FIRST ELEMENT
+                                         
+print(nums)
