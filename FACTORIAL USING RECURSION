@@ -1,0 +1,12 @@
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n*factorial(n-1)
+        
+a=int(input("Enter a number to find factorial :"))
+print(f"the factorial of {a} is :",factorial(a))
+
+OUTPUT:
+Enter a number to find factorial :3
+the factorial of 3 is : 6
