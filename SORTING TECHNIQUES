@@ -1,0 +1,13 @@
+''' BUBBLE SORT : IT IS THE SIMPLEST SORTING ALGORITHM WHICH WORKS BY REPEATEDLY SWAPPING THE ADJACENT ELEMENTS '''
+
+nums = list(map(int,input("Enter the elements to be sorted  :").split(',')))
+for i in range(len(nums)):
+    for j in range(len(nums)-i-1):
+        if nums[j]>nums[j+1]:
+            nums[j] , nums[j+1] = nums[j+1] ,nums[j]
+            
+print(nums)
+
+OUTPUT:
+Enter the elements to be sorted  :55,83,23,44,10,2
+[2, 10, 23, 44, 55, 83]
